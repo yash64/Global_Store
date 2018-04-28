@@ -1,8 +1,6 @@
 
 ############ CAPSTONE PROJECT ###########
 ## Title : Customer behavior and Recommender system
-## Group Members: Jyotirmaya Patro, Lakshmikanta Gowda, Suvendu Lenka, Vivek Sarangi, Yaswanth Kumar
-## PGPBABI-2017, Bengaluru, Section-B
 #########################################
 
 ## Load required libraries
@@ -21,7 +19,7 @@ library(forecast)
 library(graphics)
 library(tseries)
 # Read the data
-store <- read_excel("E:/Great Lakes/Subjects/Capstone Project/Global Superstore Orders 2016.xlsx")
+store <- read_excel("E:/.../Global_store.xlsx")
 
 #Data Exploration
 dim(store)
@@ -49,6 +47,7 @@ g <- ggplot(coun_sal_pro[1:10,], aes(x = reorder(Country,Total_sales), y = Total
 g + geom_bar(aes(fill = Profit), stat = "identity", position = position_dodge()) + coord_flip() +
   labs(y = "Total Sales", x = "Country", title = "Top 10 Countries Sales & Profit") +
   scale_fill_gradient(labels = comma) + theme(plot.title = element_text(hjust = 0.5))
+#######Excluded major data exploration##############
 
 #####Association Rule#####
 
